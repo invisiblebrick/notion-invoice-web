@@ -1,7 +1,7 @@
 {
 	"mcpServers": {
 		"context7": {
-			"type": "stdio",
+			"type": "http",
 			"url": "https://mcp.context7.com/mcp",
 			"headers": {
 				"CONTEXT7_API_KEY": "ctx7sk-9bdfbc08-3b7a-4795-bff2-70e9e63e0207"
@@ -30,6 +30,16 @@
 				"shadcn@latest",
 				"mcp"
 			]
-		}
+		},
+    "shrimp-task-manager": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["/Users/kiyoung/dev/lecture/claude-code-mastery/mcp-shrimp-task-manager/dist/index.js"],
+      "env": {
+        "DATA_DIR": "/Users/kiyoung/dev/lecture/claude-code-mastery/invoice-web/shrimp_data",
+        "TEMPLATES_USE": "en",
+        "ENABLE_GUI": "true"
+      }
+    }
 	}
 }
