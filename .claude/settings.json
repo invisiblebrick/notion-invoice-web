@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs",
+      "mcp__sequential-thinking",
+      "mcp__shadcn",
+      "mcp__playwright",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:ui.shadcn.com)",
+      "WebFetch(domain:lucide.dev)",
+      "Bash(npm run dev)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git init:*)",
+      "WebFetch(domain:localhost)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(git branch:*)",
+      "Bash(git fetch:*)",
+      "Bash(git reset:*)",
+      "Bash(chmod:*)"
+    ]
+  },
+  "hooks": {
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/kiyoung/dev/lecture/claude-code-mastery/claude-nextjs-starterkit/.claude/hooks/slack-notification.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/kiyoung/dev/lecture/claude-code-mastery/claude-nextjs-starterkit/.claude/hooks/slack-stop.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
